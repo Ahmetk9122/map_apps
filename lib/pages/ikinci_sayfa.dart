@@ -96,13 +96,13 @@ class _PageTwoState extends State<PageTwo> {
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(color: Colors.transparent),
-          color: index % 2 == 0 ? Colors.grey.shade400 : Colors.teal.shade800,
+          color: index % 2 == 0 ? Color.fromRGBO(118, 132, 120, 1) : Color.fromRGBO(83, 99, 86, 1),
           borderRadius: BorderRadius.circular(12),
         ),
         child: ExpansionTile(
           title: Text(
             Strings.FORMUL_ADLARI[index],
-            style: index % 2 == 0 ? Sabitler.CardStyle : Sabitler.FormulStyle,
+            style: index % 2 == 0 ? Sabitler.aciklamaBaslik : Sabitler.aciklamaDetay,
           ),
           children: [
             Container(
@@ -111,10 +111,11 @@ class _PageTwoState extends State<PageTwo> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
+                    
                     Strings.FORMUL_ACIKLAMA[index],
                     style: index % 2 == 0
-                        ? Sabitler.CardStyle
-                        : Sabitler.FormulStyle,
+                        ? Sabitler.aciklamaBaslik
+                        : Sabitler.aciklamaDetay,
                   ),
                 )),
           ],

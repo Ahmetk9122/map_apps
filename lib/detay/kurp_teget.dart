@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'dart:math';
 
-class a_Formulu extends StatefulWidget {
-  a_Formulu({Key? key}) : super(key: key);
+class Teget extends StatefulWidget {
+  Teget({Key? key}) : super(key: key);
 
   @override
-  _a_FormuluState createState() => _a_FormuluState();
+  _TegetState createState() => _TegetState();
 }
-class _a_FormuluState extends State<a_Formulu> {
-  TextEditingController x = TextEditingController();
-  TextEditingController y = TextEditingController();
-  TextEditingController z = TextEditingController();
+
+class _TegetState extends State<Teget> {
+  /*R*/TextEditingController x = TextEditingController();
+  /*Some noktası*/TextEditingController y = TextEditingController();
+
   double sonuc =0;
-  double grand =0;
   void hesapla ()
   {
     setState(() {
-
-     double Derece =(double.parse(x.text));
-     double dakika =(double.parse(y.text)/60);
-     double saniye =(double.parse(z.text)/3600);
-  double derece =(Derece+dakika+saniye);
-     sonuc =((derece/180)*200);
-
+     double some =((double.parse(y.text))/2);
+     double tanj=tan(some);
+     sonuc =((double.parse(x.text))*tanj);
       
     });
                    
@@ -86,7 +83,7 @@ class _a_FormuluState extends State<a_Formulu> {
                     ),
                 child: Center(
                     child: Text(
-                  "GRAND DÖNÜŞÜMÜ",
+                  "TEĞET BOYU HESABI",
                   style: Sabitler.detayStyle,
                 )),
               ),
@@ -99,13 +96,13 @@ class _a_FormuluState extends State<a_Formulu> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      padding: const EdgeInsets.only(top:30,left: 5, right: 5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             height: 50,
-                            width: 120,
+                            width: 150,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -121,7 +118,7 @@ class _a_FormuluState extends State<a_Formulu> {
                                   ),
                                   filled: true,
                                   fillColor: Colors.grey.shade400,
-                                  hintText: "Derece",
+                                  hintText: "Yarıçap",
                                   
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -138,7 +135,7 @@ class _a_FormuluState extends State<a_Formulu> {
                           ),
                           Container(
                             height: 50,
-                            width: 120,
+                            width: 150,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -152,7 +149,7 @@ class _a_FormuluState extends State<a_Formulu> {
                                           color: Colors.grey, width: 2.0)),
                                   filled: true,
                                   fillColor: Colors.grey.shade400,
-                                  hintText: "Dakika",
+                                  hintText: "Some Açısı",
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Colors.grey.shade700,
@@ -172,45 +169,6 @@ class _a_FormuluState extends State<a_Formulu> {
                    SizedBox(
                      height: 25,
                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 50,
-                            width: 150,
-                            color: Colors.white,
-                            child: Center(
-                              child: TextField(
-                                controller: z,
-                                 cursorColor: Colors.black,
-                                decoration: InputDecoration(
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Colors.grey, width: 2.0),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10)),
-                                  ),
-                                  filled: true,
-                                  fillColor: Colors.grey.shade400,
-                                  hintText: "Saniye",
-                                  border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Colors.grey.shade700,
-                                          width: 2.0),
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(10),
-                                      )),
-                                ),
-                                keyboardType: TextInputType.number,
-                                keyboardAppearance: Brightness.dark,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -243,7 +201,7 @@ class _a_FormuluState extends State<a_Formulu> {
                         // green as background color
                         ),
                         child:
-                        Center(child: Text(sonuc.toStringAsFixed(6),style: Sabitler.detayStyle,)),
+                        Center(child: Text("${sonuc.toString()} Metre",style: Sabitler.detayStyle,)),
                   ),
                 ),
               ),
@@ -276,5 +234,6 @@ class _a_FormuluState extends State<a_Formulu> {
         ],
       ),
     );
+ ;
   }
 }

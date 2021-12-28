@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
 
-class a_Formulu extends StatefulWidget {
-  a_Formulu({Key? key}) : super(key: key);
+class kordinat_hesabi extends StatefulWidget {
+  kordinat_hesabi({Key? key}) : super(key: key);
 
   @override
-  _a_FormuluState createState() => _a_FormuluState();
+  _kordinat_hesabiState createState() => _kordinat_hesabiState();
 }
-class _a_FormuluState extends State<a_Formulu> {
-  TextEditingController x = TextEditingController();
-  TextEditingController y = TextEditingController();
-  TextEditingController z = TextEditingController();
+
+class _kordinat_hesabiState extends State<kordinat_hesabi> {
+   /*h1*/ TextEditingController x = TextEditingController();
+   /*h2*/ TextEditingController y = TextEditingController();
+   /*a*/  TextEditingController z = TextEditingController();
+   /*b*/  TextEditingController v = TextEditingController();
+   /*c*/  TextEditingController q = TextEditingController();
+
   double sonuc =0;
-  double grand =0;
   void hesapla ()
   {
     setState(() {
-
-     double Derece =(double.parse(x.text));
-     double dakika =(double.parse(y.text)/60);
-     double saniye =(double.parse(z.text)/3600);
-  double derece =(Derece+dakika+saniye);
-     sonuc =((derece/180)*200);
-
+     double f1 =((double.parse(z.text)*double.parse(x.text))/2);
+     double f2 =((double.parse(v.text)*(double.parse(x.text)+double.parse(y.text)))/2);
+     double f3 =((double.parse(q.text)*double.parse(y.text))/2);
+     sonuc =(f1+f2+f3);
       
     });
                    
@@ -60,14 +60,14 @@ class _a_FormuluState extends State<a_Formulu> {
           ),
           SliverPadding(
             padding: EdgeInsets.only(
-              left: 50,
-              right: 50,
+              left: 40,
+              right: 40,
               top: 8,
             ),
             sliver: SliverToBoxAdapter(
               child: Container(
-                width: 75,
-                height: 45,
+                width: 95,
+                height: 55,
                 decoration: BoxDecoration(
                     border: Border.all(
                         width: 0.5,
@@ -86,7 +86,7 @@ class _a_FormuluState extends State<a_Formulu> {
                     ),
                 child: Center(
                     child: Text(
-                  "GRAND DÖNÜŞÜMÜ",
+                  " Dik Koordinat Yöntemiyle Alan\n                     Hesabı",
                   style: Sabitler.detayStyle,
                 )),
               ),
@@ -99,13 +99,13 @@ class _a_FormuluState extends State<a_Formulu> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      padding: const EdgeInsets.only(top:30,left: 5, right: 5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             height: 50,
-                            width: 120,
+                            width: 150,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -121,7 +121,7 @@ class _a_FormuluState extends State<a_Formulu> {
                                   ),
                                   filled: true,
                                   fillColor: Colors.grey.shade400,
-                                  hintText: "Derece",
+                                  hintText: "h1",
                                   
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -138,7 +138,7 @@ class _a_FormuluState extends State<a_Formulu> {
                           ),
                           Container(
                             height: 50,
-                            width: 120,
+                            width: 150,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -152,7 +152,119 @@ class _a_FormuluState extends State<a_Formulu> {
                                           color: Colors.grey, width: 2.0)),
                                   filled: true,
                                   fillColor: Colors.grey.shade400,
-                                  hintText: "Dakika",
+                                  hintText: "h2",
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey.shade700,
+                                          width: 2.0),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
+                                      )),
+                                ),
+                                keyboardType: TextInputType.number,
+                                keyboardAppearance: Brightness.dark,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                    ),
+                     Padding(
+                      padding: const EdgeInsets.only(top:30,left: 5, right: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 150,
+                            color: Colors.white,
+                            child: Center(
+                              child: TextField(
+                                controller: z,
+                                //textAlign: TextAlign.center,
+                                cursorColor: Colors.black,
+                                decoration: InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.grey, width: 2.0),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10)),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.grey.shade400,
+                                  hintText: "a",
+                                  
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey.shade700,
+                                          width: 2.0),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
+                                      )),
+                                ),
+                                keyboardType: TextInputType.number,
+                                keyboardAppearance: Brightness.dark,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 50,
+                            width: 150,
+                            color: Colors.white,
+                            child: Center(
+                              child: TextField(
+                                controller: v,
+                                 cursorColor: Colors.black,
+                                decoration: InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
+                                      borderSide: BorderSide(
+                                          color: Colors.grey, width: 2.0)),
+                                  filled: true,
+                                  fillColor: Colors.grey.shade400,
+                                  hintText: "b",
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey.shade700,
+                                          width: 2.0),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
+                                      )),
+                                ),
+                                keyboardType: TextInputType.number,
+                                keyboardAppearance: Brightness.dark,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      
+                    ),
+                     Padding(
+                      padding: const EdgeInsets.only(top:30,left: 20, right: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 150,
+                            color: Colors.white,
+                            child: Center(
+                              child: TextField(
+                                controller: q,
+                                 cursorColor: Colors.black,
+                                decoration: InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.grey, width: 2.0),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10)),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.grey.shade400,
+                                  hintText: "c",
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Colors.grey.shade700,
@@ -172,47 +284,10 @@ class _a_FormuluState extends State<a_Formulu> {
                    SizedBox(
                      height: 25,
                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 50,
-                            width: 150,
-                            color: Colors.white,
-                            child: Center(
-                              child: TextField(
-                                controller: z,
-                                 cursorColor: Colors.black,
-                                decoration: InputDecoration(
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Colors.grey, width: 2.0),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10)),
-                                  ),
-                                  filled: true,
-                                  fillColor: Colors.grey.shade400,
-                                  hintText: "Saniye",
-                                  border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Colors.grey.shade700,
-                                          width: 2.0),
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(10),
-                                      )),
-                                ),
-                                keyboardType: TextInputType.number,
-                                keyboardAppearance: Brightness.dark,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                   
                   ],
                 ),
+                
               ),
               ),
           SliverPadding(
@@ -243,7 +318,7 @@ class _a_FormuluState extends State<a_Formulu> {
                         // green as background color
                         ),
                         child:
-                        Center(child: Text(sonuc.toStringAsFixed(6),style: Sabitler.detayStyle,)),
+                        Center(child: Text("${sonuc.toStringAsFixed(2)} M\u{00B2}",style: Sabitler.detayStyle,)),
                   ),
                 ),
               ),
@@ -276,5 +351,6 @@ class _a_FormuluState extends State<a_Formulu> {
         ],
       ),
     );
+ ;
   }
 }

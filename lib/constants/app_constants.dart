@@ -16,6 +16,13 @@ class Sabitler {
   
   static final TextStyle CardStyle =
       GoogleFonts.quicksand(fontSize: 16, color: Colors.black);
+  
    static final TextStyle FormulStyle =
       GoogleFonts.quicksand(fontSize: 16, color: Colors.black);
+
+   static final TextStyle aciklamaBaslik =
+      GoogleFonts.quicksand(fontSize: 18, color: Colors.white);
+
+   static final TextStyle aciklamaDetay =
+      GoogleFonts.quicksand(fontSize: 16, color: Colors.white);
 }

@@ -127,7 +127,7 @@ class _bFormuluState extends State<bFormulu> {
                         children: [
                           Container(
                             height: 50,
-                            width: 120,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -160,7 +160,7 @@ class _bFormuluState extends State<bFormulu> {
                           ),
                           Container(
                             height: 50,
-                            width: 120,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
