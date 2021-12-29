@@ -102,7 +102,7 @@ class _TegetState extends State<Teget> {
                         children: [
                           Container(
                             height: 50,
-                            width: 150,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -135,7 +135,7 @@ class _TegetState extends State<Teget> {
                           ),
                           Container(
                             height: 50,
-                            width: 150,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -201,13 +201,13 @@ class _TegetState extends State<Teget> {
                         // green as background color
                         ),
                         child:
-                        Center(child: Text("${sonuc.toString()} Metre",style: Sabitler.detayStyle,)),
+                        Center(child: Text("${sonuc.toStringAsFixed(3)} Metre",style: Sabitler.detayStyle,)),
                   ),
                 ),
               ),
             ), ),
           SliverPadding(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.only(bottom: 8,left: 8,right: 8),
             sliver: SliverToBoxAdapter(
               child: Center(
                 child: SizedBox(

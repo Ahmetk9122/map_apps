@@ -227,7 +227,7 @@ class _bFormuluState extends State<bFormulu> {
                         // green as background color
                         ),
                         child:
-                        Center(child: Text(sonuc.toString(),style: Sabitler.detayStyle,)),
+                        Center(child: Text(sonuc.toStringAsFixed(3),style: Sabitler.detayStyle,)),
                   ),
                 ),
               ),

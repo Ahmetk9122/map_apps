@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
 import 'package:map_app/data/strings.dart';
 import 'package:map_app/model/formul.dart';
+import 'package:map_app/pages/sliver_appbars.dart';
 
 
 class PageTwo extends StatefulWidget {
@@ -12,7 +13,7 @@ class PageTwo extends StatefulWidget {
   }
   List<Formul> veriKaynaginiHazirla() {
     List<Formul> gecici = [];
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 8; i++) {
       var formulAdi = Strings.FORMUL_ADLARI[i];
       var formulKucukResim = Strings.FORMUL_KUCUK_RESIM[i];
       Formul eklenecekFormul = Formul(formulAdi, formulKucukResim);
@@ -39,32 +40,7 @@ class _PageTwoState extends State<PageTwo> {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: <Widget>[
-        SliverAppBar(
-          expandedHeight: 220,
-          pinned: true,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(30),
-            ),
-          ),
-          backgroundColor: Colors.teal.shade900,
-          flexibleSpace: FlexibleSpaceBar(
-            title: Text(
-              "MAP APP",
-              style: Sabitler.baslikStyle,
-            ),
-            centerTitle: true,
-            background: ClipRRect(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30)),
-              child: Image.asset(
-                "assets/img/0.png",
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-        ),
+        sliAppbar(),
         SliverPadding(
           padding: EdgeInsets.all(8),
           sliver: SliverList(
@@ -100,21 +76,24 @@ class _PageTwoState extends State<PageTwo> {
           borderRadius: BorderRadius.circular(12),
         ),
         child: ExpansionTile(
+          iconColor: Colors.white,
+          collapsedIconColor: Colors.white54,
           title: Text(
             Strings.FORMUL_ADLARI[index],
-            style: index % 2 == 0 ? Sabitler.aciklamaBaslik : Sabitler.aciklamaDetay,
+            style: index % 2 == 0 ? Sabitler.aciklamaBaslik : Sabitler.aciklamaBaslik,
           ),
           children: [
             Container(
+              
                 height: 200,
                 width: MediaQuery.of(context).size.width,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Text(
                     
                     Strings.FORMUL_ACIKLAMA[index],
                     style: index % 2 == 0
-                        ? Sabitler.aciklamaBaslik
+                        ? Sabitler.aciklamaDetay
                         : Sabitler.aciklamaDetay,
                   ),
                 )),

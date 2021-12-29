@@ -105,7 +105,7 @@ class _kordinat_hesabiState extends State<kordinat_hesabi> {
                         children: [
                           Container(
                             height: 50,
-                            width: 150,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -138,7 +138,7 @@ class _kordinat_hesabiState extends State<kordinat_hesabi> {
                           ),
                           Container(
                             height: 50,
-                            width: 150,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -177,7 +177,7 @@ class _kordinat_hesabiState extends State<kordinat_hesabi> {
                         children: [
                           Container(
                             height: 50,
-                            width: 150,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(
@@ -210,7 +210,7 @@ class _kordinat_hesabiState extends State<kordinat_hesabi> {
                           ),
                           Container(
                             height: 50,
-                            width: 150,
+                            width: 130,
                             color: Colors.white,
                             child: Center(
                               child: TextField(

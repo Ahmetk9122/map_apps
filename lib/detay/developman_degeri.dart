@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
 
-class gercekAlan extends StatefulWidget {
-  gercekAlan({Key? key}) : super(key: key);
+class Developman extends StatefulWidget {
+  Developman({Key? key}) : super(key: key);
 
   @override
-  _gercekAlanState createState() => _gercekAlanState();
+  _DevelopmanState createState() => _DevelopmanState();
 }
+ 
+      
+class _DevelopmanState extends State<Developman> {
+   /*R*/TextEditingController x = TextEditingController();
+  /*Some noktası*/TextEditingController y = TextEditingController();
 
-class _gercekAlanState extends State<gercekAlan> {
-   TextEditingController x = TextEditingController();
-  TextEditingController y = TextEditingController();
-  String km ="km";
-
-  var sonuc =0;
+  double sonuc =0;
   void hesapla ()
   {
     setState(() {
-     
-     sonuc =(int.parse(x.text)*(int.parse(y.text)*int.parse(y.text)));
-      
+     double pi =3.14;
+    
+     sonuc =((pi*(double.parse(x.text))*(double.parse(y.text)))/200);
     });
                    
   }
@@ -82,7 +82,7 @@ class _gercekAlanState extends State<gercekAlan> {
                     ),
                 child: Center(
                     child: Text(
-                  "GERÇEK ALAN HESABI",
+                  "DEVELOPMAN BOYU",
                   style: Sabitler.detayStyle,
                 )),
               ),
@@ -117,7 +117,7 @@ class _gercekAlanState extends State<gercekAlan> {
                                   ),
                                   filled: true,
                                   fillColor: Colors.grey.shade400,
-                                  hintText: "Harita Alanı",
+                                  hintText: "Yarıçap",
                                   
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -148,7 +148,7 @@ class _gercekAlanState extends State<gercekAlan> {
                                           color: Colors.grey, width: 2.0)),
                                   filled: true,
                                   fillColor: Colors.grey.shade400,
-                                  hintText: "Ölçek Paydası",
+                                  hintText: "Some Açısı",
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Colors.grey.shade700,
@@ -200,7 +200,7 @@ class _gercekAlanState extends State<gercekAlan> {
                         // green as background color
                         ),
                         child:
-                        Center(child: Text("${sonuc.toString()} KM\u{00B2}",style: Sabitler.detayStyle,)),
+                        Center(child: Text("${sonuc.toStringAsFixed(2)} Metre",style: Sabitler.detayStyle,)),
                   ),
                 ),
               ),
@@ -234,6 +234,5 @@ class _gercekAlanState extends State<gercekAlan> {
       ),
     );
  ;
-  
   }
 }

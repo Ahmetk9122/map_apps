@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'package:map_app/detay/bisektris_boyu.dart';
+import 'package:map_app/detay/developman_degeri.dart';
 import 'package:map_app/detay/egim.dart';
 import 'package:map_app/detay/gercek_alan.dart';
 import 'package:map_app/detay/gercek_uzunluk.dart';
@@ -57,8 +59,20 @@ class FormulItem extends StatelessWidget {
             break;
           case "Kurp Teğet Boyu":
             {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Teget()));
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Teget()));
+            }
+            break;
+          case "Developman (D)":
+            {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Developman()));
+            }
+            break;
+          case "Bisektris (BS)":
+            {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Bisektris()));
             }
             break;
 
@@ -89,7 +103,7 @@ class FormulItem extends StatelessWidget {
               ),
             ],
             borderRadius: BorderRadius.circular(30), // radius of 10
-            color: Colors.white70
+            color: Colors.white54,
             // green as background color
             ),
         width: 150,

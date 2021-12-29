@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
   [
     Icon(Icons.home,size:30),
     Icon(Icons.map,size:30),
-    Icon(Icons.exit_to_app,size:30),
+    Icon(Icons.question_answer,size:30),
   ],
     onTap: (index)
     {
