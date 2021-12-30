@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'package:map_app/helper/data_helper.dart';
+import 'package:map_app/model/ders.dart';
 
 class Developman extends StatefulWidget {
   Developman({Key? key}) : super(key: key);
@@ -20,6 +22,9 @@ class _DevelopmanState extends State<Developman> {
      double pi =3.14;
     
      sonuc =((pi*(double.parse(x.text))*(double.parse(y.text)))/200);
+     var ekeleneekDers =Ders(ad: "Developman Boyu", deger: sonuc.toStringAsFixed(6));
+    DataHelper.dersEkle(ekeleneekDers);
+    print(DataHelper.tumEklenenDersler);
     });
                    
   }

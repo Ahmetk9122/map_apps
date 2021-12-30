@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'package:map_app/helper/data_helper.dart';
+import 'package:map_app/model/ders.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 class bFormulu extends StatefulWidget {
   bFormulu({Key? key}) : super(key: key);
@@ -43,8 +45,12 @@ class _bFormuluState extends State<bFormulu> {
   void hesapla ()
   {
     setState(() {
+
      
      sonuc =(int.parse(x.text))/(int.parse(y.text));
+     var ekeleneekDers =Ders(ad: "Eğim", deger: sonuc.toStringAsFixed(6));
+    DataHelper.dersEkle(ekeleneekDers);
+    print(DataHelper.tumEklenenDersler);
       
     });
                    

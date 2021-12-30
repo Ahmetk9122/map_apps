@@ -32,4 +32,10 @@ class Sabitler {
 
    static final TextStyle aciklamaDetay =
       GoogleFonts.quicksand(fontSize: 15, color: Colors.white);
+
+  static final TextStyle sayfaucBaslikSiyah =
+      GoogleFonts.quicksand(fontWeight: FontWeight.w700, color: Colors.black87);
+  static final TextStyle sayfaucAltbaslik =
+      GoogleFonts.quicksand(color: Colors.black87);
+ 
 }

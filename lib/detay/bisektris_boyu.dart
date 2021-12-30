@@ -1,6 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'package:map_app/helper/data_helper.dart';
+import 'package:map_app/model/ders.dart';
 
 class Bisektris extends StatefulWidget {
   Bisektris({Key? key}) : super(key: key);
@@ -19,6 +21,9 @@ class _BisektrisState extends State<Bisektris> {
     double some =((double.parse(y.text))/2);
     double cosj=cos(some);
     sonuc = ((double.parse(x.text)/cosj)-(double.parse(x.text)));
+    var ekeleneekDers =Ders(ad: "Bisektris Boyu", deger: sonuc.toStringAsFixed(6));
+    DataHelper.dersEkle(ekeleneekDers);
+    print(DataHelper.tumEklenenDersler);
     });
   }
 

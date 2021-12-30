@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'package:map_app/helper/data_helper.dart';
+import 'package:map_app/model/ders.dart';
 
 class a_Formulu extends StatefulWidget {
   a_Formulu({Key? key}) : super(key: key);
@@ -11,6 +13,9 @@ class _a_FormuluState extends State<a_Formulu> {
   TextEditingController x = TextEditingController();
   TextEditingController y = TextEditingController();
   TextEditingController z = TextEditingController();
+  String girilenDerece ="";
+  String girilenDakika ="";
+  String girilenSaniye ="";
   double sonuc =0;
   double grand =0;
   void hesapla ()
@@ -22,8 +27,9 @@ class _a_FormuluState extends State<a_Formulu> {
      double saniye =(double.parse(z.text)/3600);
   double derece =(Derece+dakika+saniye);
      sonuc =((derece/180)*200);
-
-      
+    var ekeleneekDers =Ders(ad: "Grand Dönüşümü", deger: sonuc.toStringAsFixed(6));
+    DataHelper.dersEkle(ekeleneekDers);
+    print(DataHelper.tumEklenenDersler);
     });
                    
   }
@@ -108,7 +114,12 @@ class _a_FormuluState extends State<a_Formulu> {
                             width: 120,
                             color: Colors.white,
                             child: Center(
-                              child: TextField(
+                              child: TextFormField(
+                                onSaved: (deger)
+                                {
+                                    girilenDerece =deger!;
+                                },
+
                                 controller: x,
                                 //textAlign: TextAlign.center,
                                 cursorColor: Colors.black,
@@ -141,7 +152,11 @@ class _a_FormuluState extends State<a_Formulu> {
                             width: 120,
                             color: Colors.white,
                             child: Center(
-                              child: TextField(
+                              child: TextFormField(
+                                 onSaved: (deger)
+                                {
+                                    girilenDakika =deger!;
+                                },
                                 controller: y,
                                  cursorColor: Colors.black,
                                 decoration: InputDecoration(
@@ -182,7 +197,11 @@ class _a_FormuluState extends State<a_Formulu> {
                             width: 150,
                             color: Colors.white,
                             child: Center(
-                              child: TextField(
+                              child: TextFormField(
+                                 onSaved: (deger)
+                                {
+                                    girilenSaniye=deger!;
+                                },
                                 controller: z,
                                  cursorColor: Colors.black,
                                 decoration: InputDecoration(
@@ -262,6 +281,7 @@ class _a_FormuluState extends State<a_Formulu> {
                     ),
                     onPressed: () {
                       setState(() {
+                        
                         hesapla();
                        });
                       isVisible =!isVisible;
@@ -277,4 +297,5 @@ class _a_FormuluState extends State<a_Formulu> {
       ),
     );
   }
+ 
 }

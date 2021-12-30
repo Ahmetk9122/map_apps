@@ -84,11 +84,11 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 ),
                 children: [
                   Container(
-                      height: 50,
+                      height: 280,
                       width: MediaQuery.of(context).size.width,
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: Text("asdasfasf"),
+                        child: Text("Mobil işletim sistemlerindeki hızlı gelişmelerle birlikte mobil uygulamalarda daha aktif, yaratıcı ve akıllı hale gelmektedir.  İnsanların akıllı telefonlarıyla ve doğal olarak uygulamalarla geçirdikleri vakitte her geçen gün daha da artmaktadır. Bu uygulamanın amacı harita mühendisliği görevini icra eden mühendislerimizin sahalarda excel vb. gibi uğraşması zor uygulamalar yerine uygulamamızda bulunan hazır formülleri kullanarak hem zamandan tasarruf etmek hem de iş yükünü hafifletmeye çalıştık. "),
                       )),
                 ],
               ),

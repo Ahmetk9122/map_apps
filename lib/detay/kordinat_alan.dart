@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'package:map_app/helper/data_helper.dart';
+import 'package:map_app/model/ders.dart';
 
 class kordinat_hesabi extends StatefulWidget {
   kordinat_hesabi({Key? key}) : super(key: key);
@@ -23,7 +25,9 @@ class _kordinat_hesabiState extends State<kordinat_hesabi> {
      double f2 =((double.parse(v.text)*(double.parse(x.text)+double.parse(y.text)))/2);
      double f3 =((double.parse(q.text)*double.parse(y.text))/2);
      sonuc =(f1+f2+f3);
-      
+     var ekeleneekDers =Ders(ad: "Kordinat Alanı", deger: sonuc.toStringAsFixed(6));
+    DataHelper.dersEkle(ekeleneekDers);
+    print(DataHelper.tumEklenenDersler); 
     });
                    
   }

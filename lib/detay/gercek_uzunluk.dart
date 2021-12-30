@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:map_app/constants/app_constants.dart';
+import 'package:map_app/helper/data_helper.dart';
+import 'package:map_app/model/ders.dart';
 
 class Olcek extends StatefulWidget {
   Olcek({Key? key}) : super(key: key);
@@ -18,7 +20,9 @@ class _OlcekState extends State<Olcek> {
     setState(() {
      
      sonuc =(int.parse(x.text)*int.parse(y.text));
-      
+      var ekeleneekDers =Ders(ad: "Gerçek Uzunluk", deger: sonuc.toStringAsFixed(6));
+    DataHelper.dersEkle(ekeleneekDers);
+    print(DataHelper.tumEklenenDersler);
     });
                    
   }
