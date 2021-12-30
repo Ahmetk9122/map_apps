@@ -85,7 +85,7 @@ class _PageTwoState extends State<PageTwo> {
           children: [
             Container(
               
-                height: 200,
+                height: 225,
                 width: MediaQuery.of(context).size.width,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
