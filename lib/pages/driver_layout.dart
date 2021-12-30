@@ -38,7 +38,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
             child: Container(
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.transparent),
-                color: Color.fromRGBO(191, 191, 191, 1),
+                color: Color.fromRGBO(160, 160, 160, 1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: ExpansionTile(
@@ -46,11 +46,11 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 collapsedIconColor: Colors.white54,
                 title: Text(
                   "Biz Kimiz",
-                  style: Sabitler.DrawerbaslikSiyah,
+                  style: Sabitler.aciklamaBaslik,
                 ),
                 children: [
                   Container(
-                      height: 140,
+                      height: 110,
                       width: MediaQuery.of(context).size.width,
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
@@ -58,7 +58,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                           child: Column(
                             children: [
                               Text(
-                                  "Süleyman Demirel Üniversitesi 4.sınıf öğrencisi 3 genciz. Jr.Mobile developer olarak yazılım geliştirmeleri yapmaktayız."),
+                                  "Süleyman Demirel Üniversitesi 4.sınıf öğrencisi 3 genciz. Jr.Mobile developer olarak yazılım geliştirmeleri yapmaktayız.",style: Sabitler.aciklamaDetay,),
                             ],
                           ),
                         ),
@@ -72,7 +72,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
             child: Container(
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.transparent),
-                color: Color.fromRGBO(191, 191, 191, 1),
+                color:  Color.fromRGBO(160, 160, 160, 1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: ExpansionTile(
@@ -80,16 +80,21 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 collapsedIconColor: Colors.white54,
                 title: Text(
                   "Uygulama Hakkında",
-                  style: Sabitler.DrawerbaslikSiyah,
+                  style: Sabitler.aciklamaBaslik,
                 ),
                 children: [
-                  Container(
-                      height: 280,
-                      width: MediaQuery.of(context).size.width,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Text("Mobil işletim sistemlerindeki hızlı gelişmelerle birlikte mobil uygulamalarda daha aktif, yaratıcı ve akıllı hale gelmektedir.  İnsanların akıllı telefonlarıyla ve doğal olarak uygulamalarla geçirdikleri vakitte her geçen gün daha da artmaktadır. Bu uygulamanın amacı harita mühendisliği görevini icra eden mühendislerimizin sahalarda excel vb. gibi uğraşması zor uygulamalar yerine uygulamamızda bulunan hazır formülleri kullanarak hem zamandan tasarruf etmek hem de iş yükünü hafifletmeye çalıştık. "),
-                      )),
+                  ListView(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    children:[ Container(
+                        height: 370,
+                        width: MediaQuery.of(context).size.width,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left:8.0,right: 8),
+                          child: Text("Mobil işletim sistemlerindeki hızlı gelişmelerle birlikte mobil uygulamalarda daha aktif, yaratıcı ve akıllı hale gelmektedir.  İnsanların akıllı telefonlarıyla ve doğal olarak uygulamalarla geçirdikleri vakitte her geçen gün daha da artmaktadır.Bu uygulamanın amacında harita mühendisliği görevini icra eden mühendislerimizin çalışma sahalarında Excel vb uğraşması zor olan uygulamalar yerine, uygulamanın içeriğinde bulunan hazır formülleri kullanıcı mühendislere sunmak fikri yatar.  Bu fikir doğrultusunda hazırlanan program, kullanıcı mühendislere hem zamandan tasarruf etmek hem de iş yükünü hafifletmek gibi olumlu katkılar verecektir. ",style: Sabitler.aciklamaDetay,),
+                        )),
+                    ]
+                  ),
                 ],
               ),
             ),
@@ -100,7 +105,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.transparent),
-                  color: Color.fromRGBO(191, 191, 191, 1),
+                  color:  Color.fromRGBO(160, 160, 160, 1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: AboutListTile(
@@ -108,9 +113,9 @@ class _DrawerMenuState extends State<DrawerMenu> {
                   applicationName: "MAP APP",
                   applicationIcon: Icon(Icons.save),
                   applicationVersion: "V2.0",
-                  child: Text("About Us",style:Sabitler.DrawerbaslikSiyah,),
+                  child: Text("About Us",style:Sabitler.aciklamaBaslik),
                   applicationLegalese: null,
-                  icon: Icon(Icons.keyboard),
+                  icon: Icon(Icons.keyboard ,color:Colors.white ,),
                   aboutBoxChildren: [
                     Text("Lisanslar",style:Sabitler.DrawerbaslikSiyah,),
                     Text("Kullanım Koşulları",style:Sabitler.DrawerbaslikSiyah,),

@@ -23,7 +23,7 @@ class _TegetState extends State<Teget> {
      double some =((double.parse(y.text))/2);
      double tanj=tan(some);
      sonuc =((double.parse(x.text))*tanj);
-     var ekeleneekDers =Ders(ad: "Kurp Teğet", deger: sonuc.toStringAsFixed(6));
+     var ekeleneekDers =Ders(ad: "Kurp Teğet", deger: sonuc.toStringAsFixed(3));
     DataHelper.dersEkle(ekeleneekDers);
     print(DataHelper.tumEklenenDersler);
       

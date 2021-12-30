@@ -21,8 +21,8 @@ class _DevelopmanState extends State<Developman> {
     setState(() {
      double pi =3.14;
     
-     sonuc =((pi*(double.parse(x.text))*(double.parse(y.text)))/200);
-     var ekeleneekDers =Ders(ad: "Developman Boyu", deger: sonuc.toStringAsFixed(6));
+    sonuc =((pi*(double.parse(x.text))*(double.parse(y.text)))/200);
+    var ekeleneekDers =Ders(ad: "Developman Boyu", deger:sonuc.toStringAsFixed(2));
     DataHelper.dersEkle(ekeleneekDers);
     print(DataHelper.tumEklenenDersler);
     });

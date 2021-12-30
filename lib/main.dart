@@ -67,9 +67,9 @@ class _MyHomePageState extends State<MyHomePage> {
       /*Color.fromRGBO(20, 104, 130, 1)*/
       items:
   [
-    Icon(Icons.home,size:30),
-    Icon(Icons.map,size:30),
-    Icon(Icons.question_answer,size:30),
+    Icon(Icons.calculate,size:30),
+    Icon(Icons.auto_stories,size:30),
+    Icon(Icons.assignment_sharp,size:30),
   ],
     onTap: (index)
     {

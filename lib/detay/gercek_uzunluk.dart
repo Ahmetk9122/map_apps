@@ -20,7 +20,7 @@ class _OlcekState extends State<Olcek> {
     setState(() {
      
      sonuc =(int.parse(x.text)*int.parse(y.text));
-      var ekeleneekDers =Ders(ad: "Gerçek Uzunluk", deger: sonuc.toStringAsFixed(6));
+      var ekeleneekDers =Ders(ad: "Gerçek Uzunluk", deger: sonuc.toStringAsFixed(1));
     DataHelper.dersEkle(ekeleneekDers);
     print(DataHelper.tumEklenenDersler);
     });

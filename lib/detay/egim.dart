@@ -48,7 +48,7 @@ class _bFormuluState extends State<bFormulu> {
 
      
      sonuc =(int.parse(x.text))/(int.parse(y.text));
-     var ekeleneekDers =Ders(ad: "Eğim", deger: sonuc.toStringAsFixed(6));
+     var ekeleneekDers =Ders(ad: "Eğim", deger: sonuc.toStringAsFixed(3));
     DataHelper.dersEkle(ekeleneekDers);
     print(DataHelper.tumEklenenDersler);
       

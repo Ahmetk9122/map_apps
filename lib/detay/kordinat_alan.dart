@@ -25,7 +25,7 @@ class _kordinat_hesabiState extends State<kordinat_hesabi> {
      double f2 =((double.parse(v.text)*(double.parse(x.text)+double.parse(y.text)))/2);
      double f3 =((double.parse(q.text)*double.parse(y.text))/2);
      sonuc =(f1+f2+f3);
-     var ekeleneekDers =Ders(ad: "Kordinat Alanı", deger: sonuc.toStringAsFixed(6));
+     var ekeleneekDers =Ders(ad: "Kordinat Alanı", deger: sonuc.toStringAsFixed(2));
     DataHelper.dersEkle(ekeleneekDers);
     print(DataHelper.tumEklenenDersler); 
     });

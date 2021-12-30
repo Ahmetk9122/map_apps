@@ -47,7 +47,7 @@ class _DersListesiState extends State<DersListesi> {
         : Container(
             child: Center(
               child: Text(
-                "Lütfen İşlem Ekleyiniz",
+                "Lütfen İşlem Ekleyiniz.",
                 style: Sabitler.baslikStyle,
               ),
             ),

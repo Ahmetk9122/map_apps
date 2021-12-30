@@ -21,7 +21,7 @@ class _gercekAlanState extends State<gercekAlan> {
     setState(() {
      
      sonuc =(int.parse(x.text)*(int.parse(y.text)*int.parse(y.text)));
-      var ekeleneekDers =Ders(ad: "Gerçek Alan", deger: sonuc.toStringAsFixed(6));
+      var ekeleneekDers =Ders(ad: "Gerçek Alan", deger: sonuc.toStringAsFixed(1));
     DataHelper.dersEkle(ekeleneekDers);
     print(DataHelper.tumEklenenDersler);
     });
