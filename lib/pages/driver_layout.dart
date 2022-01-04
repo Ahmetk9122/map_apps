@@ -45,7 +45,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 iconColor: Colors.white,
                 collapsedIconColor: Colors.white54,
                 title: Text(
-                  "Biz Kimiz",
+                  "Biz Kimiz ?",
                   style: Sabitler.aciklamaBaslik,
                 ),
                 children: [
@@ -91,7 +91,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                         width: MediaQuery.of(context).size.width,
                         child: Padding(
                           padding: const EdgeInsets.only(left:8.0,right: 8),
-                          child: Text("Mobil işletim sistemlerindeki hızlı gelişmelerle birlikte mobil uygulamalarda daha aktif, yaratıcı ve akıllı hale gelmektedir.  İnsanların akıllı telefonlarıyla ve doğal olarak uygulamalarla geçirdikleri vakitte her geçen gün daha da artmaktadır.Bu uygulamanın amacında harita mühendisliği görevini icra eden mühendislerimizin çalışma sahalarında Excel vb uğraşması zor olan uygulamalar yerine, uygulamanın içeriğinde bulunan hazır formülleri kullanıcı mühendislere sunmak fikri yatar.  Bu fikir doğrultusunda hazırlanan program, kullanıcı mühendislere hem zamandan tasarruf etmek hem de iş yükünü hafifletmek gibi olumlu katkılar verecektir. ",style: Sabitler.aciklamaDetay,),
+                          child: Text("Mobil işletim sistemlerindeki hızlı gelişmelerle birlikte mobil uygulamalarda daha aktif, yaratıcı ve akıllı hale gelmektedir.  İnsanların akıllı telefonlarıyla ve doğal olarak uygulamalarla geçirdikleri vakitte her geçen gün daha da artmaktadır. Bu uygulamanın amacında harita mühendisliği görevini icra eden mühendislerimizin çalışma sahalarında Excel vb uğraşması zor olan uygulamalar yerine, uygulamanın içeriğinde bulunan hazır formülleri kullanıcı mühendislere sunmak fikri yatar.  Bu fikir doğrultusunda hazırlanan program, kullanıcı mühendislere hem zamandan tasarruf etmek hem de iş yükünü hafifletmek gibi olumlu katkılar verecektir. ",style: Sabitler.aciklamaDetay,),
                         )),
                     ]
                   ),
