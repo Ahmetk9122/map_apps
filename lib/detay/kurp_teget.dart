@@ -240,6 +240,6 @@ class _TegetState extends State<Teget> {
         ],
       ),
     );
- ;
+ 
   }
 }

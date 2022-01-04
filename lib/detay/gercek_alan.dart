@@ -237,7 +237,7 @@ class _gercekAlanState extends State<gercekAlan> {
         ],
       ),
     );
- ;
+ 
   
   }
 }

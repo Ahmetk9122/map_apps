@@ -5,6 +5,7 @@ import 'package:map_app/model/formul.dart';
 import 'package:map_app/pages/formul_item.dart';
 import 'package:map_app/pages/sliver_appbars.dart';
 
+// ignore: must_be_immutable
 class Anasayfa extends StatefulWidget {
   late List<Formul> tumFormuller;
   Anasayfa() {
@@ -44,24 +45,6 @@ class _AnasayfaState extends State<Anasayfa> {
                   crossAxisSpacing: 25,
                   mainAxisExtent: 170)),
         )
-
-        /*
-          SliverToBoxAdapter(
-              child: Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 200,
-                  childAspectRatio: 3 / 2,
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 20),
-              itemCount: tumFormuller.length,
-              itemBuilder: (BuildContext context, index) {
-                return FormulItem(listelenenFormul: tumFormuller[index]);
-              }),
-            )
-            )
-            */
       ],
     );
   }

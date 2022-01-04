@@ -5,6 +5,7 @@ import 'package:map_app/model/formul.dart';
 import 'package:map_app/pages/sliver_appbars.dart';
 
 
+// ignore: must_be_immutable
 class PageTwo extends StatefulWidget {
   late List<Formul> tumFormuller;
   PageTwo() {

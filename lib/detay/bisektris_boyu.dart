@@ -236,6 +236,6 @@ class _BisektrisState extends State<Bisektris> {
         ],
       ),
     );
-    ;
+    
   }
 }

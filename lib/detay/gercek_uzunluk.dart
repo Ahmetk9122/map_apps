@@ -239,6 +239,6 @@ class _OlcekState extends State<Olcek> {
         ),
       ),
     );
- ;
+ 
   }
 }

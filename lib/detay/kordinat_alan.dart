@@ -355,6 +355,6 @@ class _kordinat_hesabiState extends State<kordinat_hesabi> {
         ],
       ),
     );
- ;
+ 
   }
 }
