@@ -83,7 +83,33 @@ class _PageTwoState extends State<PageTwo> {
             style: index % 2 == 0 ? Sabitler.aciklamaBaslik : Sabitler.aciklamaBaslik,
           ),
           children: [
-            Container(
+           ListTile(
+             title:Container(
+              
+                height: 150,
+                child:SingleChildScrollView(
+                  child:  Padding(
+                  padding: const EdgeInsets.only(left:8.0,right:8,bottom:8),
+                  child: Text(
+                    
+                    Strings.FORMUL_ACIKLAMA[index],
+                    style: index % 2 == 0
+                        ? Sabitler.aciklamaDetay
+                        : Sabitler.aciklamaDetay,
+                  ),
+                ),
+                
+                ),
+                ),
+           )
+          ],
+        ),
+      ),
+    );
+  }
+}
+/*
+ Container(
               
                 height: 225,
                 width: MediaQuery.of(context).size.width,
@@ -96,10 +122,16 @@ class _PageTwoState extends State<PageTwo> {
                         ? Sabitler.aciklamaDetay
                         : Sabitler.aciklamaDetay,
                   ),
-                )),
-          ],
-        ),
-      ),
-    );
-  }
-}
+                )),*/
+
+                /*
+                 Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    
+                    Strings.FORMUL_ACIKLAMA[index],
+                    style: index % 2 == 0
+                        ? Sabitler.aciklamaDetay
+                        : Sabitler.aciklamaDetay,
+                  ),
+                ),*/
